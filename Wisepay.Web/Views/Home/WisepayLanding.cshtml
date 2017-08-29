@@ -1,0 +1,73 @@
+﻿
+@{
+  ViewBag.Title = "WisepayLanding";
+}
+@section scripts {
+    <script src="~/Scripts/angular.min.js"></script>
+    <script src="~/Scripts/angular-route.min.js"></script>
+    <script src="~/Scripts/angular-cookies.min.js"></script>
+    <script src="~/Scripts/jquery-1.10.2.min.js"></script>
+    <script src="~/Scripts/moment.min.js"></script>
+    <script src="~/Scripts/daterangepicker.js"></script>
+    <script src="~/Scripts/bootstrap.min.js"></script>
+    <script src="~/Scripts/angular-animate.min.js"></script>
+    <script src="~/Scripts/angular-aria.min.js"></script>
+    <script src="~/Scripts/angular-messages.min.js"></script>
+    <script src="~/Scripts/sweetalert.min.js"></script>
+
+
+
+    <script src="~/App/Wisepay/App.js"></script>
+    <script src="~/App/Wisepay/ViewModels/rootviewmodel.js"></script>
+
+    <script src="~/App/Wisepay/ViewModels/aboutusmodel.js"></script>
+    <script src="~/App/Wisepay/ViewModels/detailsmodel.js"></script>
+    <script src="~/App/Wisepay/ViewModels/homemodel.js"></script>
+    <script src="~/App/Wisepay/ViewModels/loginmodel.js"></script>
+    <script src="~/App/Wisepay/ViewModels/paymentmodel.js"></script>
+    <script src="~/App/Wisepay/ViewModels/registeradminusermodel.js"></script>
+    <script src="~/App/Wisepay/ViewModels/registermodel.js"></script>
+    <script src="~/App/Wisepay/ViewModels/wisepaylandingviewmodel.js"></script>
+
+
+    <link href="~/Content/sweetalert.css" rel="stylesheet" />
+    <link href="~/Content/daterangepicker.css" rel="stylesheet" />
+
+}
+@section jsCode {
+    angular.bootstrap(document.getElementById("wisepay"), ['wisepay']);
+}
+
+
+<div ng-non-bindable>
+    <div id="wisepay" data-ng-controller="rootviewmodel">
+        <div class="container">
+            <div class="row" align="right" style="background-color: coral">
+                <div align="center">
+                    <button ng-click="goHome()">Home</button>
+                    <button ng-click="gotoaboutus()">About Us</button>
+                    <button ng-if="iscustomer" ng-click="gotoregisternewclient()" display=none>Registration</button>
+                    <button ng-if="iscallcenteruser" ng-click="gotosearch()" display=none>Search</button>
+                    <button ng-if="iscallcenteruser" ng-click="gotoprocesspayment()" display=none>Process Payment</button>
+                    <button ng-if="showlogin" ng-click="gotologin()">Login</button>
+                    <button ng-if="showsignout" ng-click="signout()">SignOut</button>
+                    <button ng-if="iscallcenteruser" ng-click="gotoregisteradminuser()" display=none>Register Admin</button>
+                </div>
+            </div>
+            <div class="col d-flex align-items-center justify-content-end">
+                <div class="user " align="right">
+                    <strong> You are logged in as : {{currentloggedinuser}}</strong>@*@User.Identity.Name!*@
+                </div>
+            </div>
+            <div align="center">
+                <main>
+                    <form style="background-color: grey">
+                        @*<h2>{{ pageHeading }}</h2>*@
+                        @*<h2>WisepayLanding</h2>*@
+                        <div ng-view align="center"></div>
+                    </form>
+                </main>
+            </div>
+        </div>
+    </div>
+</div>

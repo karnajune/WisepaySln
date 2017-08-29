@@ -1,0 +1,8 @@
+C:\Srinivas\TestProjects\Wisepay\Wisepay\Wisepay.RegistrationForm\bin\Debug\Wisepay.RegistrationForm.exe.config
+C:\Srinivas\TestProjects\Wisepay\Wisepay\Wisepay.RegistrationForm\bin\Debug\Wisepay.RegistrationForm.exe
+C:\Srinivas\TestProjects\Wisepay\Wisepay\Wisepay.RegistrationForm\bin\Debug\Wisepay.RegistrationForm.pdb
+C:\Srinivas\TestProjects\Wisepay\Wisepay\Wisepay.RegistrationForm\obj\Debug\Wisepay.RegistrationForm.csprojResolveAssemblyReference.cache
+C:\Srinivas\TestProjects\Wisepay\Wisepay\Wisepay.RegistrationForm\obj\Debug\Wisepay.RegistrationForm.Properties.Resources.resources
+C:\Srinivas\TestProjects\Wisepay\Wisepay\Wisepay.RegistrationForm\obj\Debug\Wisepay.RegistrationForm.csproj.GenerateResource.Cache
+C:\Srinivas\TestProjects\Wisepay\Wisepay\Wisepay.RegistrationForm\obj\Debug\Wisepay.RegistrationForm.exe
+C:\Srinivas\TestProjects\Wisepay\Wisepay\Wisepay.RegistrationForm\obj\Debug\Wisepay.RegistrationForm.pdb

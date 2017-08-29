@@ -1,0 +1,97 @@
+﻿<div ng-app class="container" style="background-color: beige">
+    <div class="row">
+        <h2>{{pageheading}}.</h2><br /><br />
+    </div>
+    <div id="adminUsersList">
+        <div align="center">
+            <a align="left" href="#" class="btn btn-update" style="color: red" ng-click="listadminusers()">View All Admin Users</a>
+            <a align="right" href="#" class="btn btn-update" style="color: red" ng-click="hidelist()">Hide List</a>
+        </div>
+        <div id="adminUserListDiv">
+            <table id="adminlistTable" class="table table-hover">
+                <thead>
+                    <tr>
+                        <th>Id</th>
+                        <th class="text-center">First Name</th>
+                        <th class="text-center">Last Name</th>
+                        <th class="text-center">User Name</th>
+                        <th class="text-center">Password</th>
+                        <th class="text-center">Comments</th>
+                        <th class="text-center">Registered Date</th>
+                        <th class="text-center">Role Expiry Date</th>
+                        <th class="text-center">Is Active</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr ng-repeat="x in adminUserslist">
+                        <td class="text-center">{{x.id}}</td>
+                        <td class="text-center">{{x.firstName}}</td>
+                        <td class="text-center">{{x.lastName}}</td>
+                        <td class="text-center">{{x.userName}}</td>
+                        <td class="text-center">{{x.password}}</td>
+                        <td class="text-center">{{x.comments}}</td>
+                        <td class="text-center">{{x.registereddate}}</td>
+                        <td class="text-center">{{x.roleExpirtyDate}}</td>
+                        <td class="text-center">{{x.isActive}}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div><br /><br />
+
+    <h5 class="" id="" style="color: orange">Register Admin User</h5>
+    <div class="col-6">
+        <div class="form-group">
+            <div class="row">
+                <label for="" class="">First Name</label>
+                <input type="text" class="form-control" name="input" ng-model="userfirstname"
+                       placeholder="First Name" required />
+            </div>
+        </div>
+        <div class="col-6">
+            <div class="form-group">
+                <div class="row">
+                    <label for="" class="">Last Name</label>
+                    <input type="text" class="form-control" name="input" ng-model="lastname"
+                           placeholder="Last Name" required />
+                </div>
+            </div>
+            <div class="col-6">
+                <div class="form-group">
+                    <div class="row">
+                        <label for="" class="">User Name</label>
+                        <input type="text" class="form-control" name="input" ng-model="username"
+                               placeholder="username" required />
+                    </div>
+                </div>
+                <div class="col-6">
+                    <div class="form-group">
+                        <div class="row">
+                            <label for="" class="">Password</label>
+                            <input type="password" class="form-control" name="input" ng-model="userpassword"
+                                   placeholder="password" required />
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12">
+                    <div class="form-group">
+                        <label for="" class="">Valid Untill:</label><br />
+
+                        <input id="expirydate" ng-model="expirydate" type="text" name="expirydate" placeholder="select date" style="background: #fff; cursor: pointer; padding: 5px 10px; border: 1px solid #ccc; width: 100%" />
+
+                    </div>
+                </div>
+                <div class="col-12">
+                    <div id="usercommentSection" class="form-group">
+                        <label for="">Additional Comments</label>
+                        <textarea id="userCommentsEntered" ng-model="userCommentsEntered" name="" cols="20" rows="10" class="form-control"></textarea>
+                    </div>
+
+                    <p class="text-center">
+                        <button class="btn btn-go" type="submit" ng-click="saveadminuserentry()" style="background-color: orangered">Save Admin Entry</button>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

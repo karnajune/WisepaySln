@@ -1,0 +1,5 @@
+C:\Srinivas\TestProjects\Wisepay\Wisepay\PaymentGatewayServiceWrapper\bin\Debug\PaymentGatewayServiceWrapper.dll
+C:\Srinivas\TestProjects\Wisepay\Wisepay\PaymentGatewayServiceWrapper\bin\Debug\PaymentGatewayServiceWrapper.pdb
+C:\Srinivas\TestProjects\Wisepay\Wisepay\PaymentGatewayServiceWrapper\obj\Debug\PaymentGatewayServiceWrapper.csprojResolveAssemblyReference.cache
+C:\Srinivas\TestProjects\Wisepay\Wisepay\PaymentGatewayServiceWrapper\obj\Debug\PaymentGatewayServiceWrapper.dll
+C:\Srinivas\TestProjects\Wisepay\Wisepay\PaymentGatewayServiceWrapper\obj\Debug\PaymentGatewayServiceWrapper.pdb

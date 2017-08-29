@@ -1,0 +1,118 @@
+﻿<div ng-app class="container">
+    <div class="row">
+        <h2>Welcome to our {{pageheading}}.</h2><br />
+    </div>
+    <div ng-show="IsRedirectionVisible">
+        <span style="color: red;background-color: burlywood" align="center">Please Search for a candidate from Search tab and navigate to this page by entering required details</span>
+    </div>
+    <div ng-show="IspaymentDivVisible">
+        <div class="row">
+            <div class="col-6" align="left" style="float: left; width: 500px; height: 300px; background-color: burlywood">
+                <form>
+                    <label>Candidate ID: {{candidatenumber}}</label><br />
+                    <label> Name of Candidate: {{candidatename}}</label><br />
+                    <label> Address: {{candidateaddress}}</label>
+                </form>
+            </div>
+            <div class="col-6" align="right" style="float: left; width: 500px; height: 300px; background-color: beige">
+                <form id="instituedetailsform">
+                    <label>Institute ID: {{institutenumber}}</label><br />
+                    <label> Name of Institute: {{institutename}}</label><br />
+                    <label> Address: {{instituteaddress}}</label><br />
+                </form>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12">
+                <form id="paymentform" style="background-color:aqua">
+                    <div align="center">
+                        <span><strong>Payment Section</strong></span><br /><br />
+
+                        <table>
+                            <tr>
+                                <td>
+                                    <label ng-model="cardnumber" ng-pattern="/^(0*[1-9]+0*)+$/"> Card Number:</label>
+
+                                </td>
+                                <td>
+                                    <input type="text" step="any" class="form-control" name="cardnumber" ng-model="cardnumber" id="checkcreditcardnumber"
+                                           placeholder="enter card number" data-credit-card-type data-ng-pattern="/^[0-9]+$/" data-ng-minlength="16" maxlength="16" required />
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <label ng-model="cardexpirydate"> Expiry Date:</label>
+                                </td>
+                                <td>
+                                    <input type="text" step="any" class="form-control" name="cardexpirydatemonth" ng-model="cardexpirydatemonth" id="checkcardepirymonth" data-ng-pattern="/^[0-9]+$/"
+                                           placeholder="MM" data-ng-minlength="2" maxlength="2" required />
+
+                                </td>
+                                <td><span> \ </span> </td>
+                                <td>
+                                    <input type="text" step="any" class="form-control" name="cardexpirydateyear" ng-model="cardexpirydateyear" id="checkcardepiryyear" data-ng-pattern="/^[0-9]+$/"
+                                           data-ng-minlength="2" maxlength="2" placeholder="YY" required />
+
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <label ng-model="cardcvv"> CVV:</label>
+
+                                </td>
+                                <td>
+                                    <input type="text" only-digits step="any" class="form-control" name="cardcvv" ng-model="cardcvv" id="checkcardcvv"  data-ng-pattern="/^[0-9]+$/"
+                                           data-ng-minlength="3" maxlength="3" placeholder="CVV" required/><br/><br/>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <label ng-model="cardholdersname"> Name on Card:</label>
+
+                                </td>
+                                <td>
+
+                                    <input type="text" id="cardholdersname" class="form-control" name="input" ng-model="cardholdersname"
+                                           placeholder="Card holders name" required /><br /><br />
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <label for="">Billing Address</label>
+
+                                </td>
+                                <td>
+                                    <textarea id="paymentbillingaddress" ng-model="paymentbillingaddress" name="" cols="20" rows="10" class="form-control"></textarea>
+
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <label ng-model="paymentamount"> Amount:</label>
+
+                                </td>
+                                <td>
+
+                                    <input id="txtpaymentamount" type="text" only-digits step="any" class="form-control" name="input" ng-model="paymentamount"
+                                           placeholder="enter amount" pattern="\d+(\.\d{1,2})?" required/><br/><br/>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <label for="">Additional Comments</label>
+
+                                </td>
+                                <td>
+                                    <textarea id="paymentrelatedcomments" ng-model="paymentrelatedcomments" name="" cols="20" rows="10" class="form-control"></textarea>
+
+                                </td>
+                            </tr>
+                        </table>
+                        <button id="btnpaynow" class="btn btn-go" type="submit" ng-click="pay()" style="background-color: orangered; position: relative;">Pay Now</button>
+                        <button class="btn btn-go" type="submit" ng-click="cancel()" style="background-color: Red; position: relative;">Cancel</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

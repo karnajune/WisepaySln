@@ -1,0 +1,18 @@
+﻿<div ng-app class="container">
+    <div class="row">
+        <h2>Welcome to our {{pageheading}}.</h2><br />
+    </div>
+    <div>
+        <body>
+            <div class="login">
+                <h1>Login</h1>
+                <form method="post">
+                    <input type="text" name="u" placeholder="Username" ng-model="username" required="required"><br/>
+                    <input type="password" name="p" placeholder="Password" ng-model="password" required="required"><br/>
+                    <button type="submit" class="btn btn-primary btn-large" ng-click="letmein()" >Let me in.</button><br/>
+                    Not registered?<a href="#" ng-click="redirecttoregister()" style="color: greenyellow">Register</a>
+                </form>
+            </div>
+        </body>
+    </div>
+</div>

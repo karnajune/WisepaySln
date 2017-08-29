@@ -1,0 +1,7 @@
+C:\Srinivas\TestProjects\Wisepay\Wisepay\Logging\obj\Debug\Logging.csprojResolveAssemblyReference.cache
+C:\Srinivas\TestProjects\Wisepay\Wisepay\Logging\bin\Debug\Logging.dll
+C:\Srinivas\TestProjects\Wisepay\Wisepay\Logging\bin\Debug\Logging.pdb
+C:\Srinivas\TestProjects\Wisepay\Wisepay\Logging\bin\Debug\NLog.dll
+C:\Srinivas\TestProjects\Wisepay\Wisepay\Logging\bin\Debug\NLog.xml
+C:\Srinivas\TestProjects\Wisepay\Wisepay\Logging\obj\Debug\Logging.dll
+C:\Srinivas\TestProjects\Wisepay\Wisepay\Logging\obj\Debug\Logging.pdb

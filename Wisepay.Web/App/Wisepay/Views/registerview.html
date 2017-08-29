@@ -1,0 +1,181 @@
+﻿<div ng-app class="container">
+    <div class="row">
+        <h2>Welcome to our {{pageheading}}.</h2><br /><br />
+</div>
+    <div>
+        <table>
+            <tr>
+                <td class="text-center">
+                    <a href="#" class="btn btn-update" data-toggle="modal"  ng-click="registercandidate()" style="color: yellow">Register Candidate</a><!--data-target="#register-user-entry"-->
+                </td>
+                <td class="text-center">
+                    <a href="#" class="btn btn-update" data-toggle="modal" data-target="#register-institute-entry" ng-click="registerinstitute()" style="color: yellow">Register Institution</a><!--data-target="#register-institute-entry"-->
+                </td>
+            </tr><br/>
+        </table>
+    </div><br/><br />
+</div>
+<!--Register Member Popup-->
+<div class="modal fade" id="register-user-entry" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content" style="background-color: beige">
+            <div class="modal-header green">
+                <h5 class="modal-title" id="register-user-entry-label" style="color: orange">Register New User for Institute</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="form-group">
+                            <div class="row">
+                                <div id="institutesDropDown" class="col-6">
+                                    <label for="" class="">Please Select Institue </label>
+                                    <select ng-model="dropdowninstitutename" style="width: 150%"
+                                            ng-options="institute as institute.name for institute in myinstituteslist" class="form-control">
+                                        <option value="" disabled selected>Please Select Institute</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="form-group">
+                                <div class="row">
+                                    <label for="" class="">First Name</label>
+                                    <input type="text" class="form-control" name="input" ng-model="memberfirstname"
+                                           placeholder="First Name" required/>
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <div class="form-group">
+                                    <div class="row">
+                                        <label for="" class="">Last Name</label>
+                                        <input type="text" class="form-control" name="input" ng-model="memberlastname"
+                                               placeholder="Last Name" required/>
+                                    </div>
+                                </div>
+                                <div class="col-6">
+                                    <div class="form-group">
+                                        <div class="row">
+                                            <label for="" class="">User Name</label>
+                                            <input type="text" class="form-control" name="input" ng-model="memberusername"
+                                                   placeholder="username" required/>
+                                        </div>
+                                    </div>
+                                    <div class="col-6">
+                                        <div class="form-group">
+                                            <div class="row">
+                                                <label for="" class="">Password</label>
+                                                <input type="password" class="form-control" name="input" ng-model="memberpassword"
+                                                       placeholder="password" required/>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-12">
+                                        <div class="form-group">
+                                            <label for="" class="">Valid Untill:</label><br/>
+
+                                            <input id="memberexpirydate" ng-model="memberexpirydate" type="text" name="memberexpirydate" placeholder="select date" style="background: #fff; cursor: pointer; padding: 5px 10px; border: 1px solid #ccc; width: 100%"/>
+
+                                        </div>
+                                    </div>
+                                    <div class="col-12">
+                                        <div id="usercommentSection" class="form-group">
+                                            <label for="">Additional Comments</label>
+                                            <textarea id="memberCommentsEntered" ng-model="memberCommentsEntered" name="" cols="20" rows="10" class="form-control"></textarea>
+                                        </div>
+
+                                        <p class="text-center">
+                                            <button class="btn btn-go" type="submit" ng-click="savememberentry()" style="background-color: orangered">Save User Entry</button>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<!--Register Institute Popup-->
+<div class="modal fade" id="register-institute-entry" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content" style="background-color: beige">
+            <div class="modal-header green">
+                <h5 class="modal-title" id="register-institute-entry-label" style="color: orange">Register New Institute</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="form-group">
+                            <div class="row">
+                                <div id="" class="col-6">
+                                    <label for="" class="">Institue Name </label>
+                                    <input type="text" class="form-control" name="input" ng-model="institutename"
+                                           placeholder="Name" required />
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="form-group">
+                                <div class="row">
+                                    <label for="" class="">Address</label>
+                                    <!--<input type="text" class="form-control" name="input" ng-model="instituteaddress"
+                                           placeholder="Address" required/>-->
+                                    <textarea id="" ng-model="instituteaddress" name="input" cols="20" rows="10" class="form-control"  placeholder="Address"></textarea>
+
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <div class="form-group">
+                                    <div class="row">
+                                        <label for="" class="">Phone Number</label>
+                                        <input type="text" class="form-control" name="number" only-digits ng-model="institutenumber"
+                                               placeholder="Phone Number" required />
+                                    </div>
+                                </div>
+                                <div class="col-6">
+                                    <div class="form-group">
+                                        <div class="row">
+                                            <label for="" class="">Category</label>
+                                            <input type="text" class="form-control" name="input" ng-model="institutecategory"
+                                                   placeholder="Department" required />
+                                        </div>
+                                    </div>
+                                    <div class="col-12">
+                                        <div class="form-group">
+                                            <label for="" class="">Valid Untill:</label><br />
+
+                                            <input id="instituteexpirydate" ng-model="instituteexpirydate" type="text" name="instituteexpirydate" placeholder="select date" style="background: #fff; cursor: pointer; padding: 5px 10px; border: 1px solid #ccc; width: 100%" />
+
+                                        </div>
+                                    </div>
+                                    <div class="col-12">
+                                        <div id="institutecommentSection" class="form-group">
+                                            <label for="">Additional Comments</label>
+                                            <textarea id="institutecommentsentered" ng-model="institutecommentsentered" name="" cols="20" rows="10" class="form-control"></textarea>
+                                        </div>
+
+                                        <p class="text-center">
+                                            <button class="btn btn-go" type="submit" ng-click="saveinstituteentry()" style="background-color: orangered">Save Institute Entry</button>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+</div>

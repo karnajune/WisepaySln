@@ -1,0 +1,10 @@
+C:\Srinivas\TestProjects\Wisepay\Wisepay\Database\bin\Debug\Database.dll.config
+C:\Srinivas\TestProjects\Wisepay\Wisepay\Database\bin\Debug\Database.dll
+C:\Srinivas\TestProjects\Wisepay\Wisepay\Database\bin\Debug\Database.pdb
+C:\Srinivas\TestProjects\Wisepay\Wisepay\Database\bin\Debug\EntityFramework.dll
+C:\Srinivas\TestProjects\Wisepay\Wisepay\Database\bin\Debug\EntityFramework.SqlServer.dll
+C:\Srinivas\TestProjects\Wisepay\Wisepay\Database\bin\Debug\EntityFramework.xml
+C:\Srinivas\TestProjects\Wisepay\Wisepay\Database\bin\Debug\EntityFramework.SqlServer.xml
+C:\Srinivas\TestProjects\Wisepay\Wisepay\Database\obj\Debug\Database.csprojResolveAssemblyReference.cache
+C:\Srinivas\TestProjects\Wisepay\Wisepay\Database\obj\Debug\Database.dll
+C:\Srinivas\TestProjects\Wisepay\Wisepay\Database\obj\Debug\Database.pdb

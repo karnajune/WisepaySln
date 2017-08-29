@@ -1,0 +1,785 @@
+@import 'imports/global.scss';
+
+/* header */
+
+header {
+  padding: 25px 0;
+  background: white;
+
+  .user {
+    font-size: 16px;
+    color: $paragon_blue;
+    text-align: right;
+    text-transform: uppercase;
+  }
+}
+
+
+/* breadcrumbs */
+
+.breadcrumbs {
+  padding: 5px 0;
+  background: #f2f2f2;
+
+  ol {
+    margin-bottom: 0;
+
+    &.breadcrumb {
+      padding: 5px 10px;
+      border-radius: 0;
+      background: #e6e6e6;
+
+      .breadcrumb-item {
+        text-transform: uppercase;
+        font-size: 14px;
+
+        &.active {
+          font-size: 14px;
+          color: $paragon_red;
+        }
+
+        a {
+          font-size: 12px;
+          color: #a4a4a4;
+
+          &:hover {
+            color: $paragon_red;
+          }
+        }
+      }
+    }
+  }
+}
+
+
+/* modal */
+.modal-backdrop {
+  display: none;
+}
+
+.modal {
+  .modal-dialog {
+    .modal-content {
+      .modal-header {
+        &.red {
+          background: $paragon_red;
+        }
+
+        &.green {
+          background: $paragon_green;
+        }
+
+        &.yellowygreen {
+          background: $paragon_yellowygreen;
+        }
+
+        &.blue {
+          background: $paragon_blue;
+        }
+      }
+
+      .modal-body {
+        p {
+          margin: 15px 0;
+        }
+
+        label {
+          font-size: 12px;
+        }
+
+        .btn-go {
+          @include smile-btn(white, $paragon_green);
+          cursor: pointer;
+
+          &:hover {
+            @include smile-btn(white, darken($paragon_green, 10%));
+          }
+
+          &.orange {
+            background-color: $paragon_orange;
+
+            &:hover {
+              background-color: darken($paragon_orange, 10%);
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+
+/* main */
+
+main {
+  padding: 25px 0;
+  position: relative;
+  z-index: 1;
+
+  &.task-details-page {
+    background: lighten(black, 97%);
+  }
+
+  .status {
+    width: 250px;
+
+    .status-block {
+      height: 30px;
+      width: 250px;
+      color: white;
+    }
+
+    .status-icon {
+      float: right;
+      color: white;
+      width: 30px;
+      text-align: center;
+      font-size: 18px;
+    }
+
+    .can-start,
+    .task-progress,
+    .ontime-status {
+      position: absolute;
+      left: -220px;
+      z-index: 9999;
+      transition: all 0.5s ease;
+
+      &:hover {
+        left: 0;
+      }
+    }
+
+    .can-start {
+      &.yes {
+        background: $paragon_green;
+      }
+
+      .can-start-info {
+        padding: 0 10px;
+        float: left;
+        font-size: 12px;
+        color: white;
+      }
+    }
+
+    .task-progress {
+      top: 89px;
+
+      &.not-started {
+        background: lighten(black, 60%);
+      }
+
+      &.started {
+        background: $paragon_orange;
+      }
+
+      &.stopped {
+        background: $paragon_red;
+      }
+
+      &.completed {
+        background: $paragon_green;
+      }
+
+      .task-progress-option {
+        float: left;
+
+        .dropdown {
+          .btn-secondary {
+            border: 0;
+            border-radius: 0;
+            background: transparent;
+            color: white;
+
+            &.btn-sm {
+              font-size: 12px;
+            }
+          }
+
+          .dropdown-menu {
+            background: lighten(black, 60%);
+
+            .dropdown-item {
+              color: white;
+              font-size: 12px;
+            }
+          }
+        }
+      }
+    }
+
+    .ontime-status {
+      top: 57px;
+
+      &.pending {
+        background: $paragon_orange;
+      }
+
+      .ontime-status-info {
+        padding: 0 10px;
+        float: left;
+        font-size: 12px;
+        color: white;
+      }
+    }
+  }
+
+  .recorded-hours {
+    .todays-recorded-hours {
+      display: block;
+
+      .todays-info {
+        padding: 7px 10px 8px;
+        background: $paragon_green;
+        display: inline-block;
+        font-size: 14px;
+        color: white;
+      }
+
+      .edit-hours {
+        padding: 5px 10px 4px;
+        float: left;
+        background: $paragon_orange;
+
+        a {
+          color: white;
+          font-size: 18px;
+        }
+      }
+    }
+
+    .yesterdays-recorded-hours {
+      display: block;
+
+      .yesterday-info {
+        padding: 3px 0;
+        display: inline-block;
+        font-size: 12px;
+        color: #727272;
+      }
+    }
+  }
+
+  .daterangepicker,
+  .dropdown-menu {
+    border-radius: 0 !important;
+    border: 0 !important;
+  }
+
+  .daterangepicker {
+    .btn-apply {
+      font-size: 12px;
+      padding: 5px 10px;
+      @include smile-btn(white, $paragon_green);
+    }
+  }
+
+  .my-work-list {
+    padding: 25px 0;
+
+    h1 {
+      padding: 15px 0;
+      color: $paragon_blue;
+      font-size: 24px;
+    }
+
+    h2 {
+      margin-top: 10px;
+      padding: 15px 0;
+      border-top: 1px solid lighten(black, 90%);
+      border-bottom: 1px solid lighten(black, 90%);
+      @include roboto-font(300);
+      color: lighten(black, 60%);
+      font-size: 16px;
+      text-transform: uppercase;
+    }
+
+    .btn-add-nonschedule {
+      font-size: 24px;
+      padding: 5px 10px;
+      @include smile-btn(white, $paragon_red);
+    }
+
+    .task-list {
+      .tasks {
+        .nav-pills {
+          margin: 25px 0 0;
+          border-bottom: 1px solid lighten(black, 95%);
+
+          .nav-item {
+            .nav-link {
+              @include roboto-font(300);
+              color: lighten(black, 60%);
+              font-size: 16px;
+              text-transform: uppercase;
+              transition: all 0.5s ease;
+
+              &:hover {
+                color: $paragon_green;
+              }
+
+              &.active {
+                border-radius: 0;
+                background: transparent;
+                cursor: pointer;
+                color: $paragon_green;
+                background: lighten(black, 95%);
+              }
+            }
+          }
+        }
+
+        .task-content {
+          padding: 15px;
+          background: lighten(black, 95%);
+
+          .card {
+            margin-bottom: 5px;
+            border-radius: 0;
+            border: 0;
+
+            .card-header {
+              border-radius: 0;
+              border: 0;
+              border-left: 3px solid $paragon_yellowygreen;
+              @include roboto-font(500);
+              font-size: 12px;
+              background: lighten(black, 90%);
+
+              span {
+                cursor: pointer;
+              }
+
+              a {
+                color: $paragon_blue;
+
+                &:hover {
+                  color: $paragon_orange;
+                }
+              }
+            }
+
+            .card-block {
+              font-size: 12px;
+              border: 0;
+            }
+          }
+
+          .table {
+            td {
+              &.non-retainer, &.non-milestone {
+                background: lighten(black, 85%);
+              }
+
+              &.non-milestone {
+                border-right: 1px solid lighten(black, 95%);
+              }
+
+              &.retainer {
+                color: white;
+                background: $paragon_yellowygreen;
+              }
+
+              &.milestone {
+                color: white;
+                background: $paragon_green;
+              }
+
+              &.show-details {
+                border-left: 1px solid lighten(black, 95%);
+                background: $paragon_green;
+              }
+
+              &.list-retainers {
+                border-left: 1px solid lighten(black, 95%);
+                background: $paragon_yellowygreen;
+              }
+
+              .btn-more-info {
+                font-size: 11px;
+                padding: 5px 10px;
+                @include smile-btn(white, $paragon_green);
+              }
+
+              .btn-list-retainers {
+                font-size: 11px;
+                padding: 5px 10px;
+                @include smile-btn(white, $paragon_yellowygreen);
+              }
+            }
+          }
+        }
+      }
+
+      .individual-tasks {
+        margin-top: 35px;
+      }
+    }
+  }
+
+  .task-info {
+    padding-bottom: 5px;
+    border-bottom: 2px solid $paragon_blue;
+
+    .retainer-infos {
+      .retainer-info {
+        margin-bottom: 1px;
+        width: 250px;
+        text-align: right;
+        background: lighten(black, 80%);
+
+        .retainer-qty {
+          float: right;
+          color: white;
+          width: 30px;
+          text-align: center;
+
+          &.total-qty {
+            margin-left: 10px;
+            background: lighten(black, 50%);
+          }
+
+          &.started-qty {
+            margin-left: 10px;
+            background: $paragon_yellowygreen;
+          }
+        }
+
+        .total-qty-label {
+          font-size: 12px;
+          color: lighten(black, 50%);
+          @include roboto-font(300);
+        }
+
+        .started-qty-label {
+          font-size: 12px;
+          color: lighten(black, 30%);
+          @include roboto-font(300);
+        }
+      }
+    }
+
+    .task-meta {
+      font-size: 12px;
+      color: lighten(black, 50%);
+
+      .badge-retainer {
+        font-size: 12px;
+        text-transform: uppercase;
+        border-radius: 0;
+        @include roboto-font(300);
+        background-color: $paragon_yellowygreen;
+      }
+    }
+
+    .task-title {
+      h1 {
+        margin: 15px 0;
+        @include roboto-font(500);
+        color: $paragon_blue;
+        font-size: 24px;
+      }
+    }
+
+    .task-desc {
+      p {
+        @include roboto-font(400);
+        color: lighten(black, 50%);
+        font-size: 12px;
+      }
+    }
+  }
+
+  .task-dates {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid $paragon_blue;
+
+    .task-dates-meta {
+      font-size: 12px;
+      color: lighten(black, 50%);
+    }
+
+    .task-dates-title {
+      h2 {
+        margin: 5px 0;
+        @include roboto-font(500);
+        color: lighten(black, 20%);
+        font-size: 18px;
+      }
+    }
+  }
+
+  .task-assets {
+  }
+
+  .task-related {
+    width: 100%;
+
+    .related-info {
+      margin-bottom: 3px;
+      width: 100%;
+      text-align: left;
+      background: white;
+      height: 40px;
+
+      .related-info-label {
+        padding: 5px 10px;
+        font-size: 12px;
+        line-height: 14px;
+        color: lighten(black, 30%);
+        @include roboto-font(400);
+      }
+
+      .related-info-icon {
+        color: white;
+        font-size: 18px;
+        height: 40px;
+        width: 40px;
+        display: block;
+        background: lighten(black, 80%);
+
+        &.info {
+          background: $paragon_lightorange;
+        }
+
+        &.check {
+          background: $paragon_green;
+        }
+      }
+    }
+  }
+
+  .cs-comments {
+    label {
+      font-size: 12px;
+    }
+
+    textarea {
+      font-size: 12px;
+      height: 170px;
+    }
+  }
+
+  .timesheet-entries {
+    margin-top: 25px;
+    padding: 25px;
+    background: white;
+
+    .timesheet-title {
+      .btn-add-timesheet {
+        font-size: 24px;
+        padding: 5px 10px;
+        @include smile-btn(white, $paragon_red);
+      }
+
+      h1 {
+        font-size: 18px;
+        color: lighten(black, 20%);
+      }
+    }
+
+    .table {
+      td {
+        .btn-update {
+          font-size: 11px;
+          padding: 5px 10px;
+          @include smile-btn(white, $paragon_orange);
+        }
+      }
+    }
+  }
+
+  .comments {
+    margin-top: 25px;
+    padding: 25px;
+    background: white;
+
+    .comments-title {
+      .btn-add-comment {
+        font-size: 24px;
+        padding: 5px 10px;
+        @include smile-btn(white, $paragon_red);
+      }
+
+      h1 {
+        font-size: 18px;
+        color: lighten(black, 20%);
+      }
+    }
+
+    .user-comment {
+      margin-top: 15px;
+
+      .comment-info {
+        .comment-date-unit {
+          color: lighten(black, 50%);
+          font-size: 12px;
+        }
+
+        .comment-author {
+          @include roboto-font(500);
+          display: block;
+          color: lighten(black, 50%);
+          font-size: 20px;
+        }
+      }
+
+      .comment {
+        background: lighten(black, 90%);
+        padding: 5px;
+        font-size: 12px;
+      }
+    }
+  }
+}
+
+.view-comments {
+  .search-comments {
+    .form-control {
+      font-size: 11px;
+    }
+
+    .btn-view-comments {
+      font-size: 11px;
+      height: 31px;
+      width: 100%;
+      @include smile-btn(white, $paragon_green);
+    }
+
+    .comment-content {
+      padding: 15px;
+      display: none;
+      background: lighten(black, 95%);
+
+      &.open {
+        display: block;
+      }
+
+      .card {
+        margin-bottom: 5px;
+        border-radius: 0;
+        border: 0;
+
+        .card-header {
+          border-radius: 0;
+          border: 0;
+          border-left: 3px solid $paragon_yellowygreen;
+          @include roboto-font(500);
+          font-size: 12px;
+          background: lighten(black, 90%);
+
+          span {
+            cursor: pointer;
+          }
+
+          a {
+            color: $paragon_blue;
+
+            &:hover {
+              color: $paragon_orange;
+            }
+          }
+        }
+
+        .card-block {
+          font-size: 12px;
+          border: 0;
+        }
+      }
+    }
+  }
+
+  .comment-content {
+    padding: 15px;
+    background: lighten(black, 95%);
+
+    &.open {
+      display: block;
+    }
+
+    .card {
+      margin-bottom: 5px;
+      border-radius: 0;
+      border: 0;
+
+      .card-header {
+        border-radius: 0;
+        border: 0;
+        border-left: 3px solid $paragon_yellowygreen;
+        @include roboto-font(500);
+        font-size: 12px;
+        background: lighten(black, 90%);
+
+        span {
+          cursor: pointer;
+        }
+
+        a {
+          color: $paragon_blue;
+
+          &:hover {
+            color: $paragon_orange;
+          }
+        }
+      }
+
+      .card-block {
+        font-size: 12px;
+        border: 0;
+      }
+    }
+  }
+}
+
+.non-scheduled-tasks {
+  .btn-search-non-scheduled {
+    font-size: 11px;
+    height: 31px;
+    width: 100%;
+    @include smile-btn(white, $paragon_green);
+  }
+
+  .btn-addnon-scheduled {
+    font-size: 11px;
+    height: 31px;
+    width: 100%;
+    @include smile-btn(white, $paragon_red);
+  }
+
+  .search-non-scheduled-tasks {
+    .form-control {
+      font-size: 11px;
+    }
+  }
+
+  .search-content {
+    h1 {
+      margin: 15px 0;
+      @include roboto-font(500);
+      color: $paragon_blue;
+      font-size: 24px;
+    }
+
+    .customer-info {
+      font-size: 12px;
+    }
+
+    td {
+      &.btn-td {
+        background: $paragon_green;
+      }
+    }
+
+    .btn-search-non-scheduled {
+      width: auto;
+    }
+  }
+}
+
+footer {
+  @include roboto-font(300);
+  font-size: 12px;
+  color: lighten(black, 80%);
+}

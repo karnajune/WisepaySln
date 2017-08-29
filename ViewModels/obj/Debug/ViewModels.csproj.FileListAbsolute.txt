@@ -1,0 +1,5 @@
+C:\Srinivas\TestProjects\Wisepay\Wisepay\ViewModels\bin\Debug\ViewModels.dll
+C:\Srinivas\TestProjects\Wisepay\Wisepay\ViewModels\bin\Debug\ViewModels.pdb
+C:\Srinivas\TestProjects\Wisepay\Wisepay\ViewModels\obj\Debug\ViewModels.csprojResolveAssemblyReference.cache
+C:\Srinivas\TestProjects\Wisepay\Wisepay\ViewModels\obj\Debug\ViewModels.dll
+C:\Srinivas\TestProjects\Wisepay\Wisepay\ViewModels\obj\Debug\ViewModels.pdb

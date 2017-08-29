@@ -1,0 +1,91 @@
+﻿<div ng-app class="container">
+    <div class="row">
+        <h2>Welcome to our {{pageheading}}.</h2><br />
+    </div>
+    <div class="container" style="background-color: beige">
+        <h5 class="" id="" style="color: orange">Search for Details</h5>
+        <div class="row">
+            <div class="col-12">
+                <div class="form-group">
+                    <div class="row">
+                        <div id="institutesDropDown" class="col-6">
+                            <label for="" class="">Please Select Institue </label>
+                            <select ng-model="institutename"
+                                    ng-options="institute as institute.name for institute in myinstituteslist" ng-change="instituteselecteditemchanged()" class="form-control">
+                                <option value="" disabled selected>Please Select Institute</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="row">
+                        <div id="candidatesdropdown" class="col-6">
+                            <label for="" class="">Please Select Candidate </label>
+                            <select ng-model="candidatename"
+                                    ng-options="candidate as candidate.firstName + candidate.lastName for candidate in mycandidateslist" ng-change="candidateselecteditemchanged()" class="form-control">
+                                <option value="" disabled selected>Please Select Candidate</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <br /><br /><br /><br />
+                <div class="col-6">
+                    <div class="form-group">
+                        <div class="row" id="searchresults" ng-model="candidatedetails">
+                            <strong style="color: brown"> Candidate Details</strong><br/><br/>
+                            <table class="table table-hover">
+                                <thead>
+                                <tr>
+                                    <th>ID</th>
+                                    <th>Name</th>
+                                    <th>Comments</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr ng-repeat="transaction in transactionslist">
+                                    <td>{{candidatedetails.id}}</td>
+                                    <td>{{candidatedetails.firstName}} {{candidatedetails.lastName}}</td>
+                                    <td>{{candidatedetails.comments}}</td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div><br /><br /><br/>
+                <div id="transactionhistorymessage" style="color: red">{{transactionhistorymessage}}</div>
+                <div id="transactiondetailsDiv">
+                    <strong style="color: brown"> Transaction History</strong><br /><br />
+                    <div class="card-block">
+                        <table class="table table-hover">
+                            <thead>
+                            <tr>
+                                <th>Status</th>
+                                <th>PaypalRef</th>
+                                <th>Ref</th>
+                                <th>Amount</th>
+                                <th>Transaction Date</th>
+                                <th>Done By</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr ng-repeat="transaction in transactionslist">
+                                <td>{{transaction.status}}</td>
+                                <td>{{transaction.payPalRef}}</td>
+                                <td>{{transaction.ref}}</td>
+                                <td>{{ transaction.amount }}</td>
+                                <td>{{transaction.date | date: 'dd/MM/yyyy' }}</td>
+                                <td>{{ transaction.doneBy }}</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div><br /><br /><br/>
+                <div class="row">
+                    <p class="text-center">
+                        <button class="btn btn-go" type="submit" ng-click="proceedtopayment()" style="background-color: orangered">Proceed To Payment --></button>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

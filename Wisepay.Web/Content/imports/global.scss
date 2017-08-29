@@ -1,0 +1,218 @@
+/* font families */
+
+@import url('https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i');
+$roboto: 'Roboto', sans-serif;
+
+@mixin roboto-font($weight) {
+  font-family: $roboto;
+  font-weight: $weight;
+}
+
+
+/* colours */
+
+$paragon_blue: #201b50;
+$paragon_red: #ee2842;
+$paragon_green: #00b098;
+$paragon_lightgreen: lighten($paragon_green, 5%);
+$paragon_orange: #f26924;
+$paragon_yellowygreen: #c9bd0a;
+$paragon_lightorange: #f9b256;
+
+/* buttons */
+
+@mixin smile-btn($fontColor, $backgroundColor) {
+  background-color: $backgroundColor;
+  border-width: 0;
+  border-radius: 0;
+  color: $fontColor;
+}
+
+@mixin smile-btn-hover($fontColor, $backgroundColor) {
+  background-color: $backgroundColor;
+  border-width: 0;
+  border-radius: 0;
+  color: $fontColor;
+}
+
+
+/* global */
+
+html,
+body {
+  background: #fafafa;
+  margin: 0;
+  padding: 0;
+  transition: all 0.5s ease;
+}
+
+body {
+  @include roboto-font(400);
+  transition: all 0.5s ease;
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @include roboto-font(500);
+  }
+
+  a {
+    transition: all 0.5s ease;
+  }
+
+  .navbar {
+    padding-left: 0;
+    padding-right: 0;
+
+    .navbar-collapse {
+      .navbar-nav {
+        .nav-item {
+          border-bottom: 3px solid lighten(black, 95%);
+          text-transform: uppercase;
+          transition: all 0.5s ease;
+
+          &.active {
+            color: $paragon_green;
+            border-bottom: 3px solid $paragon_green;
+          }
+
+          &:hover {
+            border-bottom: 3px solid $paragon_yellowygreen;
+          }
+
+          .nav-link {
+            padding-left: 20px;
+            padding-right: 20px;
+          }
+        }
+      }
+    }
+  }
+
+  .table {
+    tr {
+      &:last-child {
+        td {
+          border-bottom: 3px solid #eceeef;
+        }
+      }
+
+      th {
+        padding: 10px;
+        border-top: 0;
+        font-size: 12px;
+        color: $paragon_blue;
+        vertical-align: middle;
+      }
+
+      td {
+        padding: 5px 10px;
+        font-size: 12px;
+        color: #666666;
+        vertical-align: middle;
+
+        &.show-details {
+          border-left: 1px solid lighten(black, 95%);
+          background: $paragon_green;
+        }
+
+        &.status {
+          color: white;
+          border-right: 1px solid #f2f2f2;
+
+          &.paragon_lightgreen {
+            background: $paragon_lightgreen;
+          }
+
+          &.paragon_green {
+            background: $paragon_green;
+          }
+
+          &.paragon_orange {
+            background: $paragon_orange;
+          }
+
+          &.paragon_lightorange {
+            background: $paragon_lightorange;
+          }
+
+          &.paragon_red {
+            background: $paragon_red;
+          }
+
+          &.paragon_blue {
+            background: $paragon_blue;
+          }
+
+          &.font_paragon_lightgreen {
+            color: $paragon_lightgreen;
+          }
+
+          &.font_paragon_green {
+            color: $paragon_green;
+          }
+
+          &.font_paragon_orange {
+            color: $paragon_orange;
+          }
+
+          &.font_paragon_lightorange {
+            color: $paragon_lightorange;
+          }
+
+          &.font_paragon_red {
+            color: $paragon_red;
+          }
+
+          &.font_paragon_blue {
+            color: $paragon_blue;
+          }
+        }
+
+        .btn-more-info {
+          font-size: 11px;
+          padding: 5px 10px;
+          @include smile-btn(white, $paragon_green);
+        }
+      }
+    }
+  }
+
+  .tooltip-inner {
+    border-radius: 0;
+    font-size: 12px;
+  }
+
+  .form-control {
+    border-radius: 0;
+  }
+
+  .modal {
+    .modal-dialog {
+      &.modal-lg {
+        max-width: 992px !important;
+      }
+
+      .modal-content {
+        border-radius: 0;
+
+        .modal-header {
+          color: white;
+
+          .modal-title {
+            @include roboto-font(300);
+          }
+
+          .close {
+            span {
+              color: white;
+            }
+          }
+        }
+      }
+    }
+  }
+}

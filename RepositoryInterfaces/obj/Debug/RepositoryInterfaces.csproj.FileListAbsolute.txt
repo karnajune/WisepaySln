@@ -1,0 +1,11 @@
+C:\Srinivas\TestProjects\Wisepay\Wisepay\RepositoryInterfaces\bin\Debug\RepositoryInterfaces.dll
+C:\Srinivas\TestProjects\Wisepay\Wisepay\RepositoryInterfaces\bin\Debug\RepositoryInterfaces.pdb
+C:\Srinivas\TestProjects\Wisepay\Wisepay\RepositoryInterfaces\bin\Debug\Database.dll
+C:\Srinivas\TestProjects\Wisepay\Wisepay\RepositoryInterfaces\bin\Debug\Database.pdb
+C:\Srinivas\TestProjects\Wisepay\Wisepay\RepositoryInterfaces\obj\Debug\RepositoryInterfaces.csprojResolveAssemblyReference.cache
+C:\Srinivas\TestProjects\Wisepay\Wisepay\RepositoryInterfaces\obj\Debug\RepositoryInterfaces.dll
+C:\Srinivas\TestProjects\Wisepay\Wisepay\RepositoryInterfaces\obj\Debug\RepositoryInterfaces.pdb
+C:\Srinivas\TestProjects\Wisepay\Wisepay\RepositoryInterfaces\bin\Debug\EFRepository.dll
+C:\Srinivas\TestProjects\Wisepay\Wisepay\RepositoryInterfaces\bin\Debug\EntityFramework.dll
+C:\Srinivas\TestProjects\Wisepay\Wisepay\RepositoryInterfaces\bin\Debug\EFRepository.pdb
+C:\Srinivas\TestProjects\Wisepay\Wisepay\RepositoryInterfaces\bin\Debug\EntityFramework.xml
